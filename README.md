@@ -31,7 +31,7 @@ Pico WiFi Duck is a project that enables the emulation of a USB Rubber Ducky ove
    - Copy the downloaded (".uf2") file to the root of the Pico (RPI-RP2). The device will reboot and after a second or so, it will reconnect as CIRCUITPY.
 
 2. **Install Pico Wifi Duck Files on the Pico:**
-   - Download the release file from [here](link-to-your-release-file).
+   - Download the release file from [here](https://github.com/majdsassi/Pico-WIFI-Duck/releases/download/Release/Relese.zip).
    - Unzip it.
    
     ![](https://gcdnb.pbrd.co/images/D8EojIfPHI9v.jpg?o=1)
