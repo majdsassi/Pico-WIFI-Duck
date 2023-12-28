@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pico  WIFI-Duck</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #36393e;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        form {
+        background-color:#2f3136;
+        height: 400px;
+        width: 400px;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+}
+
+        textarea {
+                    color: #bfbfbf;
+            resize: vertical;
+            width: 100%;
+            height: 400px;
+            padding: 15px;
+            border: none;
+            border-radius: 4px;
+            background: #36393e;
+            font-family: "Courier New", Courier, monospace;
+            box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+        }
+
+        button {
+            background-color: #ffc107;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #9f7e1c;
+        }
+        h1 {
+	font-size: 1.4rem;
+	margin-top: 1rem;
+	background:
+	#bfbfbf;
+	padding: 10px;
+	border-radius: 4px;
+	border-left: solid #20c20e 5px;
+	font-weight: 100;
+	letter-spacing: 5px;
+}
+  footer {
+            background-color: #2f3136;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+.title {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: balck;
+            position: absolute;
+            top: 60px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    </style>
+</head>
+<body>
+<div class="title"><h1>Pico WiFi Duck</h1></div>
+    <form action="/decode" method="post">
+
+        <h1>Editor <a class="reload" id="editorReload"></a></h1>
+        <textarea id="content" name="content" placeholder="Enter text here..."></textarea>
+        <button type="submit">RUN</button>
+    </form>
+  <footer style="background-color: #2f3136; color: white; text-align: center; padding: 10px;">
+        &copy; <span id="currentYear"></span> Majd Sassi | <a href="https://github.com/majdsassi/pico-wifi-duck">Github</a>
+    </footer>
+</body>
+</html>
