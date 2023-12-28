@@ -55,4 +55,4 @@ Pico WiFi Duck is a project that enables the emulation of a USB Rubber Ducky ove
 
 ### Note
 This project is still under development, and it may contain some errors.
-Dont Forget to end Your Script with anempty line .
+Dont Forget to end Your Script with an empty line .
