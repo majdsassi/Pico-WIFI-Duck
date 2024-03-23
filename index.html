@@ -15,7 +15,7 @@
             margin: 0;
         }
 
-        form {
+        .form {
         background-color:#2f3136;
         height: 400px;
         width: 400px;
@@ -89,13 +89,39 @@
     </style>
 </head>
 <body>
+    <script>
+        function sendHttpRequest(data) {
+       console.log(data);
+        var url = "http://192.168.4.1/api" ;
+        var xhr = new XMLHttpRequest();
+        xhr.open("POST", url, true);
+        xhr.setRequestHeader("Content-Type", "application/json");
+      
+        xhr.onreadystatechange = function () {
+          if (xhr.readyState === XMLHttpRequest.DONE) {
+            if (xhr.status === 200) {
+              // Request was successful
+              console.log("Request sent successfully!");
+            } else {
+              // Request failed
+              console.error("Request failed. Status:", xhr.status);
+            }
+          }
+        };
+      
+        xhr.send(JSON.stringify(data));
+      };
+      function main(){
+        var payload = document.getElementById("payload").value ;
+        var data = {username : "Payload" , content : payload} ;
+        sendHttpRequest(data) ;
+      }
+    </script>
 <div class="title"><h1>Pico WiFi Duck</h1></div>
-    <form action="/decode" method="post">
-
+    <div class="form">
         <h1>Editor <a class="reload" id="editorReload"></a></h1>
-        <textarea id="content" name="content" placeholder="Enter text here..."></textarea>
-        <button type="submit">RUN</button>
-    </form>
+        <textarea id="payload" name="content" placeholder="Enter text here..."></textarea>
+        <button onclick="main()">RUN</button></div>
   <footer style="background-color: #2f3136; color: white; text-align: center; padding: 10px;">
         &copy; <span id="currentYear"></span> Majd Sassi | <a href="https://github.com/majdsassi/pico-wifi-duck">Github</a>
     </footer>
